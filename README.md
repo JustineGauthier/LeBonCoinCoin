@@ -84,8 +84,8 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## Auteurs
 
-- [Votre Nom](https://github.com/votre-utilisateur)
-- Contributions de la communauté
+- [Justine Gauthier](https://github.com/JustineGauthier)
+- au cours de ma formation "Développeuse Web et Mobile" au [Reacteur] (https://www.lereacteur.io/)
 
 ---
 
