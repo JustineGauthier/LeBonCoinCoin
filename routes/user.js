@@ -78,9 +78,9 @@ router.post("/login", async (req, res) => {
       });
     } else {
       return res.status(201).json({
-        _id: user._id,
-        token: user.token,
-        account: user.account,
+        _id: account._id,
+        token: account.token,
+        account: account.account,
         message: "User successfully connected !",
       });
     }

@@ -93,7 +93,7 @@ router.get("/", async (req, res) => {
       sortFilter.product_price = 1;
     }
 
-    const limit = 3;
+    const limit = 20;
     const pageNumber = page || 1;
     const numberToSkip = (pageNumber - 1) * limit;
 
@@ -105,6 +105,22 @@ router.get("/", async (req, res) => {
     // .select("product_price product_name -_id");
 
     res.status(200).json(offers);
+  } catch (error) {
+    console.log("error", error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const offer_id = req.params.id;
+
+    const offer = await Offer.findById(offer_id);
+    if (!offer) {
+      return res.status(404).json({ message: "Annonce non trouvée" });
+    }
+
+    res.status(200).json(offer);
   } catch (error) {
     console.log("error", error);
     res.status(500).json({ message: error.message });
